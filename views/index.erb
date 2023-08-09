@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Oh Well - Latest Chapter</title>
+  <link rel="stylesheet" type="text/css" href="/assets/styles.css">
+</head>
+<body>
+	
+ <div class="navigation">
+	<ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/archive">Archive</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+ </div>
+  <h2>Oh Well</h2>
+  <div class="comic-wrapper">
+      <img class="comic-image" src="/assets/comics/<%= COMIC_CHAPTERS[current_chapter - 1][:pages][current_page - 1] %>" alt="Current Page">
+    </div>
+<div class = "pagination-wrapper">
+ <div class="pagination">
+    <% if current_page > 1 %>
+      <a href="/?chapter=<%= current_chapter %>&page=<%= prev_page %>">Previous</a>
+    <% end %>
+
+    <% if current_page < COMIC_CHAPTERS[current_chapter - 1][:pages].length %>
+      <a href="/?chapter=<%= current_chapter %>&page=<%= next_page %>">Next</a>
+    <% end %>
+
+    <% if current_chapter > 1 %>
+      <a href="/?chapter=<%= prev_chapter %>">Previous Chapter</a>
+    <% end %>
+
+    <% if current_chapter < COMIC_CHAPTERS.length %>
+      <a href="/?chapter=<%= next_chapter %>">Next Chapter</a>
+    <% end %>
+  </div>
+</div>
+</body>
+</html>

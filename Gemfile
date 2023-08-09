@@ -1,0 +1,15 @@
+source 'http://rubygems.org'
+ruby '3.0.0'
+
+gem 'rubygems-update'
+gem 'bundler'
+gem 'sinatra'
+gem 'rf-rest-open-uri'
+gem 'json'
+gem 'rmeetup'
+gem 'rest-client'
+gem 'addressable'
+gem 'unicorn'
+gem 'puma'
+
+gem 'datamapper'
