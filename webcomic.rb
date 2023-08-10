@@ -2,7 +2,7 @@ require 'sinatra'
 
 # Define the comic chapters with their respective pages
 COMIC_CHAPTERS = [
-  { chapter: 'Chapter 1', pages: ['OWL001-01.jpg', 'OWL001-02.jpg', 'OWL001-03.jpg'] },
+  { chapter: 'Chapter 1', pages: ['OWL001-001.jpg', 'OWL001-002.jpg', 'OWL001-003.jpg', 'OWL001-004.jpg', 'OWL001-005.jpg', 'OWL001-006.jpg', 'OWL001-007.jpg', 'OWL001-008.jpg', 'OWL001-009.jpg', 'OWL001-010.jpg', 'OWL001-011.jpg', 'OWL001-012.jpg', 'OWL001-013.jpg', 'OWL001-014.jpg'] },
   # { chapter: 'Chapter 2', pages: ['page2-1.jpg', 'page2-2.jpg', 'page2-3.jpg'] },
   # Add more chapters here...
 ]
