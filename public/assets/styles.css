@@ -6,15 +6,17 @@ body {
   padding: 0;
 }
 
-h1 {
-  text-align: center;
-  margin-top: 20px;
+/* Define a CSS rule for custom font */
+@font-face {
+  font-family: 'badhandwriting';
+  src: url('/public/assets/badhandwriting.ttf') format('truetype');
 }
 
-h2 {
-  text-align: center;
-  margin-top: 10px;
+/* Apply the custom font to all navigation and titles */
+* {
+  font-family: 'badhandwriting', cursive !important;
 }
+
 
 ul {
   list-style-type: none;
@@ -115,15 +117,16 @@ li {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  font-family: badhandwriting
 }
 
 .font-face { 
-  font-family: HandWriting; 
-  src: url('handwriting.ttf'); 
+  font-family: badhandwriting; 
+  src: url('badhandwriting.ttf'); 
 } 
 
 .h2 {
-  font-family: HandWriting
+  font-family: badhandwriting
 }
 
 .navigation {
@@ -134,6 +137,7 @@ li {
   background-color: #333333;
   height: 100vh;
   padding: 20px;
+  font-family: badhandwriting
 }
 
 .navigation ul {
@@ -153,4 +157,16 @@ li {
 
 .navigation a:hover {
   text-decoration: underline;
+}
+
+.pagination-wrapper a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'badhandwriting', cursive;
+  margin-right: 10px; /* Add some space between the links */
+}
+
+/* Define styles for clicked pagination links */
+.pagination-wrapper a.clicked {
+  color: #888888; /* Use gray-white color for clicked links */
 }

@@ -5,10 +5,20 @@
   <link rel="stylesheet" type="text/css" href="/assets/styles.css">
 </head>
 <body>
+	
+	
+    <div class="navigation">
+   	<ul>
+         <li><a href="/">Home</a></li>
+         <li><a href="/archive">Archive</a></li>
+         <li><a href="/about">About</a></li>
+       </ul>
+    </div>
+
   <h1>Oh Well - Archive</h1>
   <ul>
     <% comic_chapters.each do |chapter| %>
-      <li><%= chapter[:chapter] %></li>
+      <li>Chapter <%= chapter[:chapter] %></li>
       <ul>
         <% chapter[:pages].each do |page| %>
           <li><%= page %></li>
