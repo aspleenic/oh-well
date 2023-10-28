@@ -2,54 +2,62 @@
 <html>
 <head>
   <title>Oh Well - Latest Chapter</title>
-  <link rel="stylesheet" type="text/css" href="/assets/styles.css">
+  <link rel="stylesheet" type="text/css" href="/assets/styles/reset.css">
+  <link rel="stylesheet" type="text/css" href="/assets/styles/site.css">
 </head>
 <body>
- <div class="header">
-     <img src="/assets/OWL-TITLE.jpg" alt="Oh Well Title Image">
- </div>
-   	
- <div class="navigation">
-	<ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/archive">Archive</a></li>
-      <li><a href="/about">About</a></li>
-    </ul>
- </div>
-  
-  
-  <div class="pagination-wrapper">
-    <div class="pagination">
-      	<a href="/?chapter=<%= current_chapter %>&page=1">&LT;&LT;</a>&nbsp;
-		<% if prev_page != current_page %>
-			<a href="/?chapter=<%= current_chapter %>&page=<%= prev_page %>">&#9665;</a>&nbsp;
-		<% end %>
+	<div class="container">	
+		<div class="header">			
+		</div>
+			
+		<div class="menu">
+			<div class="brand">
+				<img src="/assets/OWL-TITLE.jpg" alt="Oh Well Title Image">				
+			</div>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/archive">Archive</a></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</div>
+		
+		<div class="main">
+			<div class="pagination-wrapper">
+				<div class="pagination">
+					<a href="/?chapter=<%= current_chapter %>&page=1">&LT;&LT;</a>&nbsp;
+					<% if prev_page != current_page %>
+						<a href="/?chapter=<%= current_chapter %>&page=<%= prev_page %>">&#9665;</a>&nbsp;
+					<% end %>
 
-		<% if next_page != current_page %>
-			<a href="/?chapter=<%= current_chapter %>&page=<%= next_page %>">&#9655;</a>&nbsp;
-		<% end %>
+					<% if next_page != current_page %>
+						<a href="/?chapter=<%= current_chapter %>&page=<%= next_page %>">&#9655;</a>&nbsp;
+					<% end %>
 
-		<a href="/?chapter=<%= current_chapter %>&page=<%= last_page %>">&GT;&GT;</a>&nbsp;
-    </div>
-  </div>
-  
-  <div class="comic-wrapper">
-	  <img class="comic-image" src="/assets/comics/<%= latest_page %>" alt="Current Page">
-  </div>
-  
-  <div class="pagination-wrapper">
-    <div class="pagination">
-      	<a href="/?chapter=<%= current_chapter %>&page=1">&LT;&LT;</a>&nbsp;
-		<% if prev_page != current_page %>
-			<a href="/?chapter=<%= current_chapter %>&page=<%= prev_page %>">&#9665;</a>&nbsp;
-		<% end %>
+					<a href="/?chapter=<%= current_chapter %>&page=<%= last_page %>">&GT;&GT;</a>&nbsp;
+				</div>
+			</div>
+			
+			<div class="comic-wrapper">
+				<img class="comic-image" src="/assets/comics/<%= latest_page %>" alt="Current Page">
+			</div>
+			
+			<div class="pagination-wrapper">
+				<div class="pagination">
+					<a href="/?chapter=<%= current_chapter %>&page=1">&LT;&LT;</a>&nbsp;
+					<% if prev_page != current_page %>
+						<a href="/?chapter=<%= current_chapter %>&page=<%= prev_page %>">&#9665;</a>&nbsp;
+					<% end %>
 
-		<% if next_page != current_page %>
-			<a href="/?chapter=<%= current_chapter %>&page=<%= next_page %>">&#9655;</a>&nbsp;
-		<% end %>
+					<% if next_page != current_page %>
+						<a href="/?chapter=<%= current_chapter %>&page=<%= next_page %>">&#9655;</a>&nbsp;
+					<% end %>
 
-		<a href="/?chapter=<%= current_chapter %>&page=<%= last_page %>">&GT;&GT;</a>&nbsp;
-    </div>
-  </div>
+					<a href="/?chapter=<%= current_chapter %>&page=<%= last_page %>">&GT;&GT;</a>&nbsp;
+				</div>
+			</div>	
+		</div>
+		<div class="footer">
+		</div>
+	</div>
 </body>
 </html>
