@@ -1,0 +1,195 @@
+/* Oh Well */
+
+:root {
+  --foreground: #FFFFFF;
+  --background: #212121;
+  --background-dark: #000000;
+  --dark-accent-0: #444444;
+  --dark-accent-1: #333333;
+  --dark-accent-2: #888888;
+  --dark-accent-3: #4E4E4E;
+  --background-dark-transparent: #0000004d;
+  --red: #FF0000;
+}
+
+
+/* Define a rule for our custom font */
+@font-face {
+  font-family: 'badhandwriting';
+  font-style: normal;
+  font-weight: normal;
+  src: local('badhandwriting'),
+    url('fonts/badhandwriting.woff') format('woff'),
+    url('fonst/badhandwriting.ttf') format('truetype');
+}
+
+/* Apply the custom font to all navigation and titles */
+* {
+  font-family: 'badhandwriting', cursive, sans-serif !important;
+}
+
+/* Grid Styling */
+.header { grid-area: header; }
+.menu { grid-area: menu; }
+.main { grid-area: main; }
+.sidebar { grid-area: sidebar; }
+.footer { grid-area: footer; }
+.container {
+  display:grid;
+  grid-template-areas: 
+    'menu header header header header header'
+    'menu main main main main main'
+    'menu footer footer footer footer footer';
+  gap: 10px;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.comic-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.prose{
+  font-size: xx-large;
+  margin-top: 5%;
+  
+}
+
+/* Stereo Theme */
+.stereo {
+  position: relative;
+  margin: 50px auto;
+  width: 400px;
+  height: 250px;
+  background-color: var(--background-dark);
+  border: 5px solid var(--foreground);
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--background-dark-transparent);
+}
+
+.speakers {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  width: 100px;
+  height: 50px;
+  background-color: var(--dark-accent-0);
+  border: 3px solid var(--foreground);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.speakers:before,
+.speakers:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--dark-accent-0);
+  border: 3px solid var(--foreground);
+  border-radius: 50%;
+}
+
+.speakers:before {
+  top: 5px;
+  left: 5px;
+}
+
+.speakers:after {
+  top: 5px;
+  right: 5px;
+}
+
+.noise-meter {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  width: 120px;
+  height: 20px;
+  background-color: var(--dark-accent-0);
+  border: 3px solid var(--foreground);
+  border-radius: 10px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.noise-meter .noise-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--red);
+  transition: width 0.5s ease;
+}
+
+.comic-wrapper {
+  display: flex;
+  justify-content: center;  
+}
+
+.comic-image {
+  max-width: 50%;
+  height: auto
+}
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-family: badhandwriting
+}
+
+.h2 {
+  font-family: badhandwriting
+}
+
+.menu {  
+  color: var(--foreground);
+  background-color: var(--dark-accent-1);
+  font-family: badhandwriting;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding:20px;
+  padding-left:25px;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu a {
+  font-size: xx-large;
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.menu .brand {
+  background-color: var(--dark-accent-3);
+}
+
+.pagination-wrapper a {
+  color: var(--foreground);
+  text-decoration: none;
+  font-family: 'badhandwriting', cursive;
+  margin-right: 10px;
+  /* Add some space between the links */
+}
+
+/* Define styles for clicked pagination links */
+.pagination-wrapper a.clicked {
+  color: var(--dark-accent-2);
+  /* Use gray-white color for clicked links */
+}
